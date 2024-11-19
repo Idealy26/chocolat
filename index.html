@@ -1,0 +1,59 @@
+<!--
+
+	Copyrights Nexthope 2022
+
+	Coded by Dijey (RAZAFIMAHATRATRA Lionnel)
+	Stagiaire Nexthope Sept-Dec 2022
+
+-->
+
+<!DOCTYPE html>
+<html lang="mg">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Sokola</title>
+		<link href="static/style/style.css" rel="stylesheet" type="text/css" />
+		<link rel="shortcut icon" href="static/img/logo.png"/>
+
+		<link rel="stylesheet" type="text/css" media="screen and (max-width: 1300px)" href="static/style/tablet.css">
+		<link rel="stylesheet" type="text/css" media="screen and (max-width: 600px)" href="static/style/phone.css">
+	</head>
+
+	<body>
+
+		<div class="welcome_img" align="center">
+			<img src="static/img/logo-title.png" class="welcome_imgs" alt="Sokola Logo" />
+		</div>
+
+		<div align="center">
+			<div id="welcome">
+				<h1 align="center">TONGASOA ATO AMIN'NY SOKOLA</h1>
+			</div>	    
+			<div class="contenue_principale" id="contenue_principale">
+		        <table summary="Sokola List">
+		        	<tr>
+						    <th scope="col">Sokola</th>
+						    <th scope="col">Malagasy</th>
+						  </tr>
+              {% for sokola in sokola_names %}
+              <tr>
+                  <td><img src="static/img/chocolate.png" class="logo_monitoring" alt="Photo sokola" /> {{ sokola[0] }}</td>
+                  <td><img src="static/img/chocolate.png" class="logo_monitoring" alt="Photo sokola" /> {{ sokola[1] }}</td>
+              {% endfor %}
+		        </table>
+			</div>
+		</div>
+	</body>
+	<footer style="position: relative;">
+  <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%);">
+    <img id="nxt-10" src="static/img/footer.png" alt="Image sokola">
+  </div>
+  <div style="text-align: center; position: relative; color: white; padding: 10px;">
+    <p>Copyrights 2023 | Dijey</p>
+    <a href="https://fb.me/d1j3y"><img src="static/img/fb.png" alt="Logo Facebook" title="Dijey Facebook" width="50" height="50" /></a><br>
+    <img src="static/img/foot.png" alt="NextHope Facebook page" title="sary sokola" width="300" height="250" />
+  </div>
+</footer>
+
+</html>
+
