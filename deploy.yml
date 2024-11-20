@@ -1,33 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sokola-app
+  name: chocolat-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: sokola-app
+      app: chocolat-app
   template:
     metadata:
       labels:
-        app: sokola-app
+        app: chocolat-app
     spec:
       containers:
-        - name: sokola-container
-          image: dijey099/sokola:latest
+        - name: chocolat-container
+          image: zeldris77/chocolat:latest
           ports:
             - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: sokola-service
+  name: chocolat-service
 spec:
   selector:
-    app: sokola-app
+    app: chocolat-app
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
-      nodePort: 30001
-  type: NodePort
+      # nodePort: 30001
+  type: LoadBalancer
